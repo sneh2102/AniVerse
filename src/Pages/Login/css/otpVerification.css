@@ -1,0 +1,134 @@
+  .otpcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .box {
+    background: rgba(255, 255, 255, 0.05);
+    width: 24rem;
+    padding: 2rem;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .h2text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    -webkit-animation: flicker 2s linear infinite;
+    animation: flicker 2s linear infinite;
+    color: #fff;
+    font-family: "Cedarville Cursive",cursive;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    /* background: #ff6d6d79; */
+    text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #00c7ff,0 0 35px #00c7ff,0 0 40px #00c7ff,0 0 50px #00c7ff;
+  }
+  
+  .error {
+    color: #f56565;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .inBox {  
+    padding-top: 20px;
+  }
+  .lable {
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    padding: 1.5rem;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .otpinput
+  {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+.optinput {
+    width: 20%;
+    background: transparent;
+    padding: 1em;
+    margin-bottom: 2em;
+    font-size: 1.1rem;
+    text-align: center;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .optinput:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
+  
+  .button {
+    background: transparent;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    width: 150px;
+    font-size: 1rem;
+  }
+  
+  .button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  .flicker {
+    -webkit-animation: flicker 2s linear infinite;
+    animation: flicker 2s linear infinite;
+    color: #fff;
+    font-family: "Cedarville Cursive",cursive;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    /* background: #ff6d6d79; */
+    text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #00c7ff,0 0 35px #00c7ff,0 0 40px #00c7ff,0 0 50px #00c7ff;
+  }
+  
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #4700a5, 0 0 35px #5d00c7, 0 0 40px #9900ff, 0 0 50px #9900ff;
+    }
+    20%, 22%, 24%, 55% {
+      text-shadow: none;
+    }
+  }
