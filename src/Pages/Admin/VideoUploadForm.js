@@ -36,9 +36,9 @@ const VideoUploadForm = () => {
     }
 
     const s3 = new AWS.S3({
-      accessKeyId: "ASIA6ODU7EGN7MWNURWW" ,
-      secretAccessKey: "gOozGoGeIQ5l6PoYzEORacaDAxxVzkCyj8V348VD",
-      sessionToken: "IQoJb3JpZ2luX2VjEM3//////////wEaCXVzLXdlc3QtMiJIMEYCIQCUi1sOQGpvSmyVvdYEQnVEBYI7kwDZPk3R2FI0kU6YPAIhALcf+jZgVo98AdTP0VmxycmoNDWtiCYhCOao6hWBsjIVKrICCPb//////////wEQABoMOTkyMzgyNzU1MjI3Igxrsouxxg1VIuXaWVMqhgKwAgy5GCnoaXqiNHMxH0JpZhunVZl5tDrKTDbNR0+/V7lNPQI/77LXRa1pR5mPawWZRVRoyp48dUFiE9f1UYjH96z2Qt0OgDNHtD8Wc5MCAWKXCf9h0oYpMwczzGcv6OSwTFYBjvHOAocu1IcUIPCzyL0fnf3Ns8cx6BUaZBrhprZp+hbZbXi8e0Jd0oorD8VEkxKXKlppbwfX0ejGizJt38u/WXAJscT/XrZftGM31qoIjtWiwCB7NrxF+VERz/MfrgvEEykSQ0GheKOYntkmGDwnWyxO+VvZfc0yGtlqBpeseFbmkRt+UXB+ZyuxzpWZOUo/bRR7//SocaVgA9YSJFceRP2bMOKq0bAGOpwBmye+shT/JT1ebhu2PMVgqprciqosovS2+2jcHxFL5rW0f3emifbS75fwn5RJfjDXPU0UK6k1TCF5GnZlIMomzZzALc3foW+Jnjs30vPKYIkhBPUCWDPXfFG2lenABSzbHXQejVDIn7wHoy5VZKMA/JwUi+wFShDUAJ48m428UYBnC2nzOLZstxbocI6c5zrNP7wddN+shYqlReNH",
+      accessKeyId: "ASIA6ODU7EGN52SRLYGN" ,
+      secretAccessKey: "T/vYjsdGb0pcwkQfJrxynaKcK2bmhkJb5vlcN3vS",
+      sessionToken: "IQoJb3JpZ2luX2VjEN7//////////wEaCXVzLXdlc3QtMiJIMEYCIQCdlC2SfesUy5Ox+zlO5eNlglvr19G2Qr+xm+yris0LzwIhALcE8/gQZUK9VHZtSSqM6SG+62FVtFyZjpUzO5HO5Jd+KqkCCBcQABoMOTkyMzgyNzU1MjI3IgwXubT5IKJhC8TjFMoqhgJC7pEPd4AS/g61umosYK4xUVNAQXkL16jwrT5XMxza8HNhZ+OyTwgwNMBgY4qwW0YCJxGjYxUlYAd/PYWwlicBG4uCKj3x1Go9qYleYqKXNm43JVs9cstBZleozwVaBFSJA4lbxzZW/D4OPwU6i82KKEihZSMls90f/IRTiP7M3iYa01JFxntEXtzhCFQuD94UqBihbAz3AJy4YdZomQX0x0XW9m3QcMo6EZ6CDv8SFWkhfNbpOKj8Atq34iNIgGOhAoKQpxWdY8psi2l18BsahxhtAx3aKb5BU1xXwIsB78Feke4WZdulpRQHUggqvZ77SGsGttTJQOclzm8FZHN4RFi0Hn8CMPuI1bAGOpwBrb06zzxmHAQvwQY+S3Dkc3tnQs/N94G+IAXzSRdBWA3jSGTEGvh6lARY0AUtzt0nRASSWiYdukIZeMjedUvs2+TZ6UuemaZYvJp9j3+J3zDJcxNynjX669r7k1jpv/9kxVYqHk4vi84SlO9psrmiLCtOtOxFCb69vJUO30/mdiViVzn5yr0Vdf5ii6yh+28Q9HKk7uHQ02YZ7MZx",
       region: 'us-east-1'
     });
 
