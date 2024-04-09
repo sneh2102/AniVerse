@@ -59,7 +59,6 @@ const VideoUploadForm = () => {
       s3.upload(thumbnailParams).promise(),
     ])
       .then((data) => {
-        console.log('Files uploaded successfully:', data);
         addVideo({ title, vKey: data[0].Key, tKey: data[1].Key });
         
       })

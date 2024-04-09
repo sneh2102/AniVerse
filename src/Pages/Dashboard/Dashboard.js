@@ -25,7 +25,6 @@ const Dashboard = () => {
    const email = window.localStorage.getItem('email');
    console.log('Email:',email);
     fetchUserDetails({email: email}).then((data)=>{
-      console.log('Data:',data);
       setRole(data.body.result.Item.role);
     }).catch((err)=>{
       console.log('Error:',err);
@@ -51,13 +50,11 @@ const Dashboard = () => {
   };
 
   const handleSearch = () => {
-    console.log('Search Term:',searchTerm);
     const searchDetails = {
       fieldValue: searchTerm
     }
       searchVideo(searchDetails).then((data)=>{
       setVideos(data);
-      console.log('Data:',data);
     }).catch((err)=>{
       console.log('Error:',err);
     });

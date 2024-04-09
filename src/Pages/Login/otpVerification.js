@@ -37,7 +37,6 @@ const OTPVerification = () => {
             color: '#fff',
           },
         });
-        console.log("yes", data);
         addUserDetails({email:email, name:displayName});
         navigate('/')
       }
