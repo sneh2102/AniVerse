@@ -116,7 +116,7 @@ const Dashboard = () => {
           </div>
         )}
         <main>
-          {videos.map((video, index) => (
+          {videos && videos.map((video, index) => (
             <div
               className="movie-container"
               key={index}
