@@ -37,7 +37,7 @@ const useVideo = () => {
 
     const searchVideo = async(details) => {
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_GATEWAY}/video/search`, details, 
+            const response = await axios.post(`${process.env.REACT_APP_API_GATEWAY}/videos/search`, details, 
             {
                 headers: {
                     'Content-Type': 'application/json',

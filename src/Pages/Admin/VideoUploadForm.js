@@ -36,20 +36,20 @@ const VideoUploadForm = () => {
     }
 
     const s3 = new AWS.S3({
-      accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID, 
-      secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY,
-      sessionToken: process.env.REACT_APP_AWS_SESSION_TOKEN,
+      accessKeyId: "ASIA6ODU7EGN7MWNURWW" ,
+      secretAccessKey: "gOozGoGeIQ5l6PoYzEORacaDAxxVzkCyj8V348VD",
+      sessionToken: "IQoJb3JpZ2luX2VjEM3//////////wEaCXVzLXdlc3QtMiJIMEYCIQCUi1sOQGpvSmyVvdYEQnVEBYI7kwDZPk3R2FI0kU6YPAIhALcf+jZgVo98AdTP0VmxycmoNDWtiCYhCOao6hWBsjIVKrICCPb//////////wEQABoMOTkyMzgyNzU1MjI3Igxrsouxxg1VIuXaWVMqhgKwAgy5GCnoaXqiNHMxH0JpZhunVZl5tDrKTDbNR0+/V7lNPQI/77LXRa1pR5mPawWZRVRoyp48dUFiE9f1UYjH96z2Qt0OgDNHtD8Wc5MCAWKXCf9h0oYpMwczzGcv6OSwTFYBjvHOAocu1IcUIPCzyL0fnf3Ns8cx6BUaZBrhprZp+hbZbXi8e0Jd0oorD8VEkxKXKlppbwfX0ejGizJt38u/WXAJscT/XrZftGM31qoIjtWiwCB7NrxF+VERz/MfrgvEEykSQ0GheKOYntkmGDwnWyxO+VvZfc0yGtlqBpeseFbmkRt+UXB+ZyuxzpWZOUo/bRR7//SocaVgA9YSJFceRP2bMOKq0bAGOpwBmye+shT/JT1ebhu2PMVgqprciqosovS2+2jcHxFL5rW0f3emifbS75fwn5RJfjDXPU0UK6k1TCF5GnZlIMomzZzALc3foW+Jnjs30vPKYIkhBPUCWDPXfFG2lenABSzbHXQejVDIn7wHoy5VZKMA/JwUi+wFShDUAJ48m428UYBnC2nzOLZstxbocI6c5zrNP7wddN+shYqlReNH",
       region: 'us-east-1'
     });
 
     const videoParams = {
-      Bucket: 'anime-video-stream',
+      Bucket: 'b00968316-aniverse-bucket',
       Key: file.name,
       Body: file,
     };
 
     const thumbnailParams = {
-      Bucket: 'anime-video-stream',
+      Bucket: 'b00968316-aniverse-bucket',
       Key: `thumbnails/${thumbnail.name}`,
       Body: thumbnail,
     };
