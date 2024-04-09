@@ -26,7 +26,7 @@ const Dashboard = () => {
    console.log('Email:',email);
     fetchUserDetails({email: email}).then((data)=>{
       console.log('Data:',data);
-      setRole(data.role);
+      setRole(data.body.result.Item.role);
     }).catch((err)=>{
       console.log('Error:',err);
     });
