@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import UserPool from '../../Utils/UserPool';
 import './css/otpVerification.css';
+import useAuth from '../../Hooks/useAuth';
 import toast from 'react-hot-toast';
 
 const OTPVerification = () => {
@@ -11,6 +12,8 @@ const OTPVerification = () => {
   const navigate = useNavigate();
   const [error, setError] = useState('');
   const email = location.state.email;
+  const displayName = location.state.displayName;
+  const { addUserDetails } = useAuth();
 
   const handleVerifyOTP = () => {
     console.log("email ", email, " otp", otp);
@@ -34,7 +37,8 @@ const OTPVerification = () => {
             color: '#fff',
           },
         });
-        console.log("yessssss", data);
+        console.log("yes", data);
+        addUserDetails({email:email, name:displayName});
         navigate('/')
       }
     });

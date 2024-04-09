@@ -13,6 +13,7 @@ const Dashboard = () => {
   const {logout,setStatus} = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+  const[role,setRole] = useState('user');
   const [selectedVideo, setSelectedVideo] = useState(null);
   const {fetchVideos,searchVideo} = useVideo();
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,6 +26,7 @@ const Dashboard = () => {
    console.log('Email:',email);
     fetchUserDetails({email: email}).then((data)=>{
       console.log('Data:',data);
+      setRole(data.role);
     }).catch((err)=>{
       console.log('Error:',err);
     });
@@ -86,9 +88,13 @@ const Dashboard = () => {
               <li>
                 <Link to="/dashboard">Dashboard</Link>
               </li>
+              {role === 'admin' ?
+              <>
               <li>
                 <Link to="/upload">Upload</Link>
               </li>
+              </>:null
+                }
               <li
                 onClick={() => {
                   logout();

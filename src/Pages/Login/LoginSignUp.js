@@ -26,10 +26,7 @@ const LoginSignUp = () => {
     confirmPassword: ''
   })
 
-  useEffect(() => {
-    const data = process.env.REACT_APP_API_GATEWAY;
-    console.log(`${data}`);
-  }, []);
+
 
   const handleLoginData = async (e) => {
     e.preventDefault();
@@ -78,9 +75,27 @@ const LoginSignUp = () => {
   const handleSignUpData = (e) => {
     setSignUpData({...signUpData, [e.target.name]: e.target.value})
     console.log(signUpData);
-    navigate('/otp-verification',
-    { state: { email: signUpData.email } }
-    )
+    if(signUpData.displayName === '' || signUpData.email === '' || signUpData.password === '' || signUpData.confirmPassword === '') {
+      toast.error('All fields are required', {
+        style: {
+          borderRadius: '10px',
+          background: '#333',
+          color: '#fff',
+        }
+      })
+      return
+    }
+    if(signUpData.password !== signUpData.confirmPassword) {
+      toast.error('Passwords do not match', {
+        style: {
+          borderRadius: '10px',
+          background: '#333',
+          color: '#fff',
+        }
+      })
+      return
+    }
+
     UserPool.signUp(signUpData.email, signUpData.password, [], null, (err, data) => {
       if(err) toast.error(err.message,{
         style: {
@@ -98,9 +113,9 @@ const LoginSignUp = () => {
             color: '#fff',
           }
         })
-        addUserDetails({email: signUpData.email, name: signUpData.displayName})
+        // addUserDetails({email: signUpData.email, name: signUpData.displayName})
         navigate('/otp-verification',
-        { state: { email: signUpData.email } }
+        { state: { email: signUpData.email, name: signUpData.displayName } }
         )
       }
     })      
