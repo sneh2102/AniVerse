@@ -133,7 +133,7 @@ To set up the Anivers platform locally or on your AWS account, follow these step
 1. Clone the Repository:
 
 ```
-git clone https://github.com/yourusername/anivers.git
+git clone https://github.com/sneh2102/anivers.git
 cd anivers
 ```
 2. Configure AWS Credentials:
