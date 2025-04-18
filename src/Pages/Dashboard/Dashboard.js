@@ -110,7 +110,7 @@ const Dashboard = () => {
             <p>{selectedVideo.title}</p>
               <video controls autoPlay>
                 <source
-                  src={`${process.env.REACT_APP_CLOUDFRONT}/${selectedVideo.vKey}`}
+                  src={`${process.env.REACT_APP_S3_LINK}/${selectedVideo.vKey}`}
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
@@ -130,7 +130,7 @@ const Dashboard = () => {
               >
 
                 <img
-                  src={`${process.env.REACT_APP_CLOUDFRONT}/${video.tKey}`}
+                  src={`${process.env.REACT_APP_S3_LINK}/${video.tKey}`}
                   alt={video.title}
                 />
                 <h2>{video.title}</h2>
