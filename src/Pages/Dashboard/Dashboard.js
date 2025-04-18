@@ -107,6 +107,7 @@ const Dashboard = () => {
         {selectedVideo && (
           <div className="video-overlay">
             <div className="video-player">
+            <p>{selectedVideo.title}</p>
               <video controls autoPlay>
                 <source
                   src={`${process.env.REACT_APP_CLOUDFRONT}/${selectedVideo.vKey}`}
@@ -119,21 +120,23 @@ const Dashboard = () => {
           </div>
         )}
         <main>
+        <div
+        className="movie-container"
+        >
           {videos && videos.map((video, index) => (
-            <div
-              className="movie-container"
+              <div className="movie-card"
               key={index}
               onClick={() => handleThumbnailClick(video)}
-            >
-              <div className="movie-card">
+              >
+
                 <img
                   src={`${process.env.REACT_APP_CLOUDFRONT}/${video.tKey}`}
                   alt={video.title}
                 />
                 <h2>{video.title}</h2>
               </div>
-            </div>
           ))}
+          </div>
         </main>
       </div>
     </>
